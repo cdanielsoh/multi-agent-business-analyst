@@ -1,0 +1,11 @@
+machine_id,name,acquisition_cost,installation_year,annual_maintenance_cost,capacity_units_per_hour,energy_consumption_kwh,footprint_sqft,remaining_useful_life_years,compatible_materials
+PKG-101,Primary Carton Former,850000,2015,44800,12000,45,850,4,"Cardboard, Recycled Cardboard"
+PKG-102,Plastic Wrap Machine,620000,2017,35000,9500,38,650,6,"LDPE Film, HDPE Film, Compostable Film"
+PKG-103,Injection Molder,1200000,2018,65000,5200,85,1200,7,"HDPE, PP, PLA, Recycled Plastic"
+PKG-104,High-Speed Cartoner,950000,2019,52000,16000,52,920,8,"Cardboard, Recycled Cardboard, Paperboard"
+PKG-105,Shrink Wrap System,580000,2020,32000,9800,35,600,9,"LDPE Film, BOPP Film, Compostable Film"
+PKG-106,Blister Pack Former,780000,2017,43000,8000,60,750,5,"PVC, PET, Recycled PET, Bioplastic"
+PKG-107,Robotic Case Packer,1450000,2021,78000,8400,95,1400,10,"Various - Universal System"
+PKG-108,Pouch Filling Machine,920000,2018,50000,7000,65,880,6,"Flexible Films, Recyclable Films, Paper-based Films"
+PKG-109,Labeling System,420000,2022,23000,19000,28,350,11,"All Package Types"
+PKG-110,Palletizer,880000,2016,48000,4800,75,1600,4,"All Package Types"

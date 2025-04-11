@@ -1,0 +1,217 @@
+material_type,date,cost_per_ton
+Cardboard,2019-01,820
+Cardboard,2019-02,825
+Cardboard,2019-03,830
+Cardboard,2019-04,835
+Cardboard,2019-05,840
+Cardboard,2019-06,845
+Cardboard,2019-07,850
+Cardboard,2019-08,855
+Cardboard,2019-09,860
+Cardboard,2019-10,865
+Cardboard,2019-11,870
+Cardboard,2019-12,875
+Cardboard,2020-01,880
+Cardboard,2020-02,885
+Cardboard,2020-03,890
+Cardboard,2020-04,920
+Cardboard,2020-05,950
+Cardboard,2020-06,980
+Cardboard,2020-07,1010
+Cardboard,2020-08,1040
+Cardboard,2020-09,1070
+Cardboard,2020-10,1100
+Cardboard,2020-11,1130
+Cardboard,2020-12,1160
+Cardboard,2021-01,1175
+Cardboard,2021-02,1190
+Cardboard,2021-03,1205
+Cardboard,2021-04,1220
+Cardboard,2021-05,1235
+Cardboard,2021-06,1250
+Cardboard,2021-07,1275
+Cardboard,2021-08,1300
+Cardboard,2021-09,1325
+Cardboard,2021-10,1350
+Cardboard,2021-11,1375
+Cardboard,2021-12,1400
+Cardboard,2022-01,1450
+Cardboard,2022-02,1500
+Cardboard,2022-03,1550
+Cardboard,2022-04,1600
+Cardboard,2022-05,1650
+Cardboard,2022-06,1700
+Cardboard,2022-07,1675
+Cardboard,2022-08,1650
+Cardboard,2022-09,1625
+Cardboard,2022-10,1600
+Cardboard,2022-11,1575
+Cardboard,2022-12,1550
+Cardboard,2023-01,1525
+Cardboard,2023-02,1500
+Cardboard,2023-03,1485
+Cardboard,2023-04,1470
+Cardboard,2023-05,1455
+Cardboard,2023-06,1440
+Cardboard,2023-07,1425
+Cardboard,2023-08,1410
+Cardboard,2023-09,1395
+Cardboard,2023-10,1380
+Cardboard,2023-11,1365
+Cardboard,2023-12,1350
+Cardboard,2024-01,1360
+Cardboard,2024-02,1370
+Cardboard,2024-03,1380
+Cardboard,2024-04,1390
+Cardboard,2024-05,1400
+Cardboard,2024-06,1410
+Cardboard,2024-07,1420
+Cardboard,2024-08,1430
+Cardboard,2024-09,1440
+Cardboard,2024-10,1450
+Cardboard,2024-11,1460
+Cardboard,2024-12,1470
+Plastic (HDPE),2019-01,1250
+Plastic (HDPE),2019-02,1245
+Plastic (HDPE),2019-03,1240
+Plastic (HDPE),2019-04,1235
+Plastic (HDPE),2019-05,1230
+Plastic (HDPE),2019-06,1225
+Plastic (HDPE),2019-07,1220
+Plastic (HDPE),2019-08,1215
+Plastic (HDPE),2019-09,1210
+Plastic (HDPE),2019-10,1205
+Plastic (HDPE),2019-11,1200
+Plastic (HDPE),2019-12,1195
+Plastic (HDPE),2020-01,1190
+Plastic (HDPE),2020-02,1185
+Plastic (HDPE),2020-03,1180
+Plastic (HDPE),2020-04,1100
+Plastic (HDPE),2020-05,1020
+Plastic (HDPE),2020-06,940
+Plastic (HDPE),2020-07,980
+Plastic (HDPE),2020-08,1020
+Plastic (HDPE),2020-09,1060
+Plastic (HDPE),2020-10,1100
+Plastic (HDPE),2020-11,1140
+Plastic (HDPE),2020-12,1180
+Plastic (HDPE),2021-01,1250
+Plastic (HDPE),2021-02,1320
+Plastic (HDPE),2021-03,1390
+Plastic (HDPE),2021-04,1460
+Plastic (HDPE),2021-05,1530
+Plastic (HDPE),2021-06,1600
+Plastic (HDPE),2021-07,1650
+Plastic (HDPE),2021-08,1700
+Plastic (HDPE),2021-09,1750
+Plastic (HDPE),2021-10,1800
+Plastic (HDPE),2021-11,1850
+Plastic (HDPE),2021-12,1900
+Plastic (HDPE),2022-01,1950
+Plastic (HDPE),2022-02,2000
+Plastic (HDPE),2022-03,2050
+Plastic (HDPE),2022-04,2100
+Plastic (HDPE),2022-05,2150
+Plastic (HDPE),2022-06,2200
+Plastic (HDPE),2022-07,2175
+Plastic (HDPE),2022-08,2150
+Plastic (HDPE),2022-09,2125
+Plastic (HDPE),2022-10,2100
+Plastic (HDPE),2022-11,2075
+Plastic (HDPE),2022-12,2050
+Plastic (HDPE),2023-01,2025
+Plastic (HDPE),2023-02,2000
+Plastic (HDPE),2023-03,1985
+Plastic (HDPE),2023-04,1970
+Plastic (HDPE),2023-05,1955
+Plastic (HDPE),2023-06,1940
+Plastic (HDPE),2023-07,1925
+Plastic (HDPE),2023-08,1910
+Plastic (HDPE),2023-09,1895
+Plastic (HDPE),2023-10,1880
+Plastic (HDPE),2023-11,1865
+Plastic (HDPE),2023-12,1850
+Plastic (HDPE),2024-01,1860
+Plastic (HDPE),2024-02,1870
+Plastic (HDPE),2024-03,1880
+Plastic (HDPE),2024-04,1890
+Plastic (HDPE),2024-05,1900
+Plastic (HDPE),2024-06,1910
+Plastic (HDPE),2024-07,1920
+Plastic (HDPE),2024-08,1930
+Plastic (HDPE),2024-09,1940
+Plastic (HDPE),2024-10,1950
+Plastic (HDPE),2024-11,1960
+Plastic (HDPE),2024-12,1970
+Bioplastic (PLA),2019-01,2100
+Bioplastic (PLA),2019-02,2095
+Bioplastic (PLA),2019-03,2090
+Bioplastic (PLA),2019-04,2085
+Bioplastic (PLA),2019-05,2080
+Bioplastic (PLA),2019-06,2075
+Bioplastic (PLA),2019-07,2070
+Bioplastic (PLA),2019-08,2065
+Bioplastic (PLA),2019-09,2060
+Bioplastic (PLA),2019-10,2055
+Bioplastic (PLA),2019-11,2050
+Bioplastic (PLA),2019-12,2045
+Bioplastic (PLA),2020-01,2040
+Bioplastic (PLA),2020-02,2035
+Bioplastic (PLA),2020-03,2030
+Bioplastic (PLA),2020-04,2025
+Bioplastic (PLA),2020-05,2020
+Bioplastic (PLA),2020-06,2015
+Bioplastic (PLA),2020-07,2010
+Bioplastic (PLA),2020-08,2005
+Bioplastic (PLA),2020-09,2000
+Bioplastic (PLA),2020-10,1995
+Bioplastic (PLA),2020-11,1990
+Bioplastic (PLA),2020-12,1985
+Bioplastic (PLA),2021-01,1980
+Bioplastic (PLA),2021-02,1975
+Bioplastic (PLA),2021-03,1970
+Bioplastic (PLA),2021-04,1965
+Bioplastic (PLA),2021-05,1960
+Bioplastic (PLA),2021-06,1955
+Bioplastic (PLA),2021-07,1950
+Bioplastic (PLA),2021-08,1945
+Bioplastic (PLA),2021-09,1940
+Bioplastic (PLA),2021-10,1935
+Bioplastic (PLA),2021-11,1930
+Bioplastic (PLA),2021-12,1925
+Bioplastic (PLA),2022-01,1920
+Bioplastic (PLA),2022-02,1915
+Bioplastic (PLA),2022-03,1910
+Bioplastic (PLA),2022-04,1905
+Bioplastic (PLA),2022-05,1900
+Bioplastic (PLA),2022-06,1895
+Bioplastic (PLA),2022-07,1890
+Bioplastic (PLA),2022-08,1885
+Bioplastic (PLA),2022-09,1880
+Bioplastic (PLA),2022-10,1875
+Bioplastic (PLA),2022-11,1870
+Bioplastic (PLA),2022-12,1865
+Bioplastic (PLA),2023-01,1860
+Bioplastic (PLA),2023-02,1855
+Bioplastic (PLA),2023-03,1850
+Bioplastic (PLA),2023-04,1845
+Bioplastic (PLA),2023-05,1840
+Bioplastic (PLA),2023-06,1835
+Bioplastic (PLA),2023-07,1830
+Bioplastic (PLA),2023-08,1825
+Bioplastic (PLA),2023-09,1820
+Bioplastic (PLA),2023-10,1815
+Bioplastic (PLA),2023-11,1810
+Bioplastic (PLA),2023-12,1805
+Bioplastic (PLA),2024-01,1800
+Bioplastic (PLA),2024-02,1795
+Bioplastic (PLA),2024-03,1790
+Bioplastic (PLA),2024-04,1785
+Bioplastic (PLA),2024-05,1780
+Bioplastic (PLA),2024-06,1775
+Bioplastic (PLA),2024-07,1770
+Bioplastic (PLA),2024-08,1765
+Bioplastic (PLA),2024-09,1760
+Bioplastic (PLA),2024-10,1755
+Bioplastic (PLA),2024-11,1750
+Bioplastic (PLA),2024-12,1745

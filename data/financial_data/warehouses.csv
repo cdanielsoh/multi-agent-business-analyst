@@ -1,0 +1,11 @@
+facility_id,total_square_footage,monthly_lease_cost,packaging_storage_allocation,average_monthly_throughput,location,annual_energy_cost,average_shipping_distance_miles
+WH-East,85000,106500,0.36,1510000,Eastern Distribution Center,252000,450
+WH-Central,120000,148500,0.41,1920000,Central Distribution Hub,318000,350
+WH-West,75000,102000,0.31,1240000,Western Fulfillment Center,225000,520
+WH-Northeast,60000,86500,0.26,990000,Northeast Regional Facility,198000,380
+WH-Southeast,70000,96000,0.33,1140000,Southeast Regional Facility,212000,410
+WH-Midwest,95000,119000,0.39,1550000,Midwest Distribution Point,268000,320
+WH-Southwest,65000,89000,0.31,1090000,Southwest Collection Center,206000,480
+WH-Northwest,55000,82000,0.29,940000,Northwest Storage Facility,192000,510
+WH-Overseas1,90000,114000,0.46,1460000,International Hub - Europe,275000,4200
+WH-Overseas2,80000,101000,0.43,1300000,International Hub - Asia,265000,7800

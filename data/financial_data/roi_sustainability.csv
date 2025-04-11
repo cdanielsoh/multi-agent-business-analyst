@@ -1,0 +1,15 @@
+metric,baseline,year_1,year_2,year_3,year_4,year_5
+annual_carbon_footprint_tons_co2e,18500,16300,14000,10700,8900,7800
+water_usage_million_liters,82,70,64,56,51,48
+landfill_waste_tons,1250,950,730,570,480,420
+virgin_material_usage_tons,9200,7350,6000,4600,3800,3200
+carbon_footprint_reduction_tons,0,2200,4500,7800,9600,10700
+water_usage_reduction_million_liters,0,12,18,26,31,34
+landfill_waste_reduction_tons,0,300,520,680,770,830
+virgin_material_reduction_tons,0,1850,3200,4600,5400,6000
+carbon_footprint_reduction_percentage,0,11.89,24.32,42.16,51.89,57.84
+water_usage_reduction_percentage,0,14.63,21.95,31.71,37.80,41.46
+landfill_waste_reduction_percentage,0,24.00,41.60,54.40,61.60,66.40
+virgin_material_reduction_percentage,0,20.11,34.78,50.00,58.70,65.22
+estimated_carbon_credit_value_USD,0,44000,90000,156000,192000,214000
+regulatory_compliance_improvement_rating,5,6.5,8.2,9.1,9.5,9.8
