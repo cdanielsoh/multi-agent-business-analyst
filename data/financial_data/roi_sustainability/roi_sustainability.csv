@@ -1,0 +1,7 @@
+year,annual_carbon_footprint_tons_co2e,water_usage_million_liters,landfill_waste_tons,virgin_material_usage_tons,carbon_footprint_reduction_tons,water_usage_reduction_million_liters,landfill_waste_reduction_tons,virgin_material_reduction_tons,carbon_footprint_reduction_percentage,water_usage_reduction_percentage,landfill_waste_reduction_percentage,virgin_material_reduction_percentage,estimated_carbon_credit_value_USD,regulatory_compliance_improvement_rating
+2019,18500,82,1250,9200,0,0,0,0,0,0,0,0,0,5
+2020,16300,70,950,7350,2200,12,300,1850,11.89,14.63,24.00,20.11,44000,6.5
+2021,14000,64,730,6000,4500,18,520,3200,24.32,21.95,41.60,34.78,90000,8.2
+2022,10700,56,570,4600,7800,26,680,4600,42.16,31.71,54.40,50.00,156000,9.1
+2023,8900,51,480,3800,9600,31,770,5400,51.89,37.80,61.60,58.70,192000,9.5
+2024,7800,48,420,3200,10700,34,830,6000,57.84,41.46,66.40,65.22,214000,9.8

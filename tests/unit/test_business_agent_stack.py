@@ -1,15 +1,21 @@
-import aws_cdk as core
-import aws_cdk.assertions as assertions
+import json
 
-from business_agent.business_agent_stack import BusinessAgentStack
+with open('structured_knoledgebase_artifacts/table_column_description.json', 'r') as f:
+    table_column_description = json.load(f)
 
-# example tests. To run these tests, uncomment this file along with the example
-# resource in business_agent/business_agent_stack.py
-def test_sqs_queue_created():
-    app = core.App()
-    stack = BusinessAgentStack(app, "business-agent")
-    template = assertions.Template.from_stack(stack)
+print(table_column_description)
 
-#     template.has_resource_properties("AWS::SQS::Queue", {
-#         "VisibilityTimeout": 300
-#     })
+test = [
+    {
+        "name": table_name,
+        "columns": [
+            {
+                "name": column_name,
+                "description": column_description
+            } for column_name, column_description in table_columns.items()
+        ],
+        "description": f"Table containing {table_name} information"
+    } for table_name, table_columns in table_column_description.items()
+]
+
+print(test)

@@ -1,0 +1,112 @@
+{
+  "costData": {
+    "date": "Date in YYYY-MM format representing the month of data collection",
+    "raw_materials": "Total monthly cost of raw materials in dollars",
+    "labor": "Total monthly labor cost in dollars",
+    "overhead": "Total monthly overhead costs in dollars",
+    "total_cost_per_unit": "Average cost per unit produced, including all expenses",
+    "waste_rate": "Fraction of materials wasted during production (decimal format)",
+    "production_volume": "Total number of units produced during the month",
+    "shipping_cost_per_unit": "Average shipping cost per unit in dollars",
+    "warehouse_utilization": "Fraction of warehouse capacity utilized (decimal format)",
+    "packaging_weight_per_unit": "Average weight of packaging per unit in grams",
+    "carbon_footprint_per_unit": "Carbon emissions per unit produced in CO2 equivalent",
+    "machine_hours": "Total machine operating hours during the month",
+    "labor_hours": "Total labor hours worked during the month",
+    "change_over_time_minutes": "Average time in minutes to change production from one product to another",
+    "maintenance_cost": "Total monthly cost for equipment maintenance in dollars"
+  },
+  "equipment": {
+    "machine_id": "Unique identifier for each piece of packaging equipment",
+    "name": "Descriptive name of the packaging machine",
+    "acquisition_cost": "Original purchase cost of the equipment in dollars",
+    "installation_year": "Year when the equipment was installed",
+    "annual_maintenance_cost": "Yearly cost to maintain the equipment in dollars",
+    "capacity_units_per_hour": "Maximum number of units the machine can process per hour",
+    "energy_consumption_kwh": "Energy consumption rate in kilowatt-hours",
+    "footprint_sqft": "Physical space occupied by the equipment in square feet",
+    "remaining_useful_life_years": "Estimated remaining functional lifespan in years",
+    "compatible_materials": "Types of packaging materials compatible with the machine"
+  },
+  "equipmentHistory": {
+    "date": "Date in YYYY-MM format of the equipment performance record",
+    "machine_id": "Unique identifier matching the equipment table",
+    "annual_maintenance_cost": "Annual maintenance cost at that point in time",
+    "capacity_units_per_hour": "Production capacity at that point in time",
+    "energy_consumption_kwh": "Energy usage rate at that point in time",
+    "remaining_useful_life_years": "Estimated remaining life at that point in time",
+    "downtime_hours_per_month": "Hours the machine was non-operational during the month",
+    "efficiency_percentage": "Operational efficiency as a percentage of theoretical maximum",
+    "parts_replaced_cost": "Cost of replacement parts during the month in dollars",
+    "operating_hours_per_month": "Total hours the machine was in operation during the month"
+  },
+  "materialCostTrends": {
+    "material_type": "Category of packaging material",
+    "date": "Date in YYYY-MM format of the price record",
+    "cost_per_ton": "Cost in dollars per metric ton of material"
+  },
+  "materialPricing": {
+    "date": "Date in YYYY-MM format of the pricing record",
+    "Mixed (Cardboard/Plastic)": "Price per unit of mixed cardboard and plastic packaging",
+    "100% Recycled Cardboard": "Price per unit of fully recycled cardboard packaging",
+    "Plant-based Bioplastic": "Price per unit of plant-derived bioplastic packaging",
+    "Minimal Hybrid Design": "Price per unit of minimal hybrid packaging design",
+    "FSC-Certified Paperboard": "Price per unit of Forest Stewardship Council certified paperboard",
+    "Biodegradable Mushroom Packaging": "Price per unit of mushroom-based biodegradable packaging",
+    "Reusable Plastic Containers": "Price per unit of reusable plastic container packaging",
+    "Bamboo-based Packaging": "Price per unit of bamboo-derived packaging",
+    "Compostable Corn Starch": "Price per unit of corn starch-based compostable packaging"
+  },
+  "roiHistory": {
+    "year": "Calendar year of the ROI data",
+    "annual_packaging_spend": "Total yearly expenditure on packaging in dollars",
+    "annual_logistics_cost": "Total yearly cost of logistics operations in dollars",
+    "waste_disposal_cost": "Yearly cost for waste disposal in dollars",
+    "customer_complaints": "Number of customer complaints related to packaging",
+    "carbon_footprint_tons": "Total carbon emissions in metric tons",
+    "water_usage_million_liters": "Water consumption in millions of liters",
+    "landfill_waste_tons": "Amount of waste sent to landfill in metric tons",
+    "virgin_material_usage_tons": "Amount of new (non-recycled) materials used in metric tons",
+    "sustainability_index": "Composite score measuring overall environmental sustainability (higher is better)",
+    "customer_satisfaction_score": "Measured score of customer satisfaction (higher is better)"
+  },
+  "roiSustainability": {
+    "year": "Calendar year of the ROI data",
+    "annual_carbon_footprint_tons_co2e": "Yearly carbon emissions in metric tons CO2 equivalent",
+    "water_usage_million_liters": "Annual water consumption in millions of liters",
+    "landfill_waste_tons": "Waste sent to landfill yearly in metric tons",
+    "virgin_material_usage_tons": "New (non-recycled) materials used annually in metric tons",
+    "carbon_footprint_reduction_tons": "Carbon emissions decrease vs. baseline in metric tons",
+    "water_usage_reduction_million_liters": "Water usage decrease vs. baseline in million liters",
+    "landfill_waste_reduction_tons": "Landfill waste decrease vs. baseline in metric tons",
+    "virgin_material_reduction_tons": "Virgin material usage decrease vs. baseline in metric tons",
+    "carbon_footprint_reduction_percentage": "Percent decrease in carbon footprint from baseline",
+    "water_usage_reduction_percentage": "Percent decrease in water usage from baseline",
+    "landfill_waste_reduction_percentage": "Percent decrease in landfill waste from baseline",
+    "virgin_material_reduction_percentage": "Percent decrease in virgin material usage from baseline",
+    "estimated_carbon_credit_value_USD": "Monetary value of carbon credits in USD",
+    "regulatory_compliance_improvement_rating": "Regulatory compliance improvement score (1-10 scale)"
+  },
+  "warehouses": {
+    "facility_id": "Unique identifier for each warehouse facility",
+    "total_square_footage": "Total floor space of the warehouse in square feet",
+    "monthly_lease_cost": "Monthly cost to lease the facility in dollars",
+    "packaging_storage_allocation": "Fraction of space allocated to packaging storage (decimal format)",
+    "average_monthly_throughput": "Average number of units processed through the facility per month",
+    "location": "Geographic description of the warehouse location",
+    "annual_energy_cost": "Yearly energy cost for the facility in dollars",
+    "average_shipping_distance_miles": "Average distance of shipments from the facility in miles"
+  },
+  "warehousesHistory": {
+    "date": "Date in YYYY-MM format of the warehouse performance record",
+    "facility_id": "Unique identifier matching the warehouses table",
+    "monthly_lease_cost": "Monthly lease cost at that point in time",
+    "packaging_storage_allocation": "Fraction of space allocated to packaging at that point in time",
+    "average_monthly_throughput": "Monthly throughput at that point in time",
+    "annual_energy_cost": "Annual energy cost at that point in time",
+    "storage_utilization_percentage": "Percentage of allocated storage space actually utilized",
+    "inventory_turnover_rate": "Rate at which inventory cycles through the warehouse per month",
+    "packaging_damage_percentage": "Percentage of packaging damaged during storage or handling",
+    "labor_hours_per_month": "Total labor hours used in the facility during the month"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "queryPairs": [
+    {
+      "naturalLanguage": "What's the breakdown of our total operational costs by category for 2023?",
+      "sqlQuery": "SELECT SUM(raw_materials) AS total_raw_materials, SUM(labor) AS total_labor, SUM(overhead) AS total_overhead FROM awsdatacatalog.financial_data_db.cost_data WHERE date LIKE '2023-%';"
+    },
+    {
+      "naturalLanguage": "How has our average cost per unit changed over time?",
+      "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, ROUND(AVG(total_cost_per_unit), 2) AS avg_cost_per_unit FROM awsdatacatalog.financial_data_db.cost_data WHERE date LIKE '2023-%' GROUP BY year ORDER BY year;"
+    },
+    {
+      "naturalLanguage": "Which packaging equipment is approaching end-of-life and needs replacement planning?",
+      "sqlQuery": "SELECT e.machine_id, e.name, e.installation_year, e.remaining_useful_life_years FROM awsdatacatalog.financial_data_db.equipment e WHERE e.remaining_useful_life_years <= 3 ORDER BY e.remaining_useful_life_years;"
+    },
+    {
+      "naturalLanguage": "How did the COVID pandemic affect our production volumes?",
+      "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, SUBSTRING(date, 6, 2) AS month, production_volume FROM awsdatacatalog.financial_data_db.cost_data WHERE date BETWEEN '2019-01' AND '2020-12' ORDER BY year, month;"
+    },
+    {
+      "naturalLanguage": "What's our yearly sustainability index trend and customer satisfaction correlation?",
+      "sqlQuery": "SELECT year, sustainability_index, customer_satisfaction_score FROM awsdatacatalog.financial_data_db.roi_history ORDER BY year;"
+    },
+    {
+      "naturalLanguage": "Which warehouse has the best ratio of throughput to square footage?",
+      "sqlQuery": "SELECT facility_id, location, average_monthly_throughput / total_square_footage AS throughput_per_sqft FROM awsdatacatalog.financial_data_db.warehouses ORDER BY throughput_per_sqft DESC;"
+    },
+    {
+      "naturalLanguage": "How has our waste rate changed over time, and what's its financial impact?",
+      "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, AVG(waste_rate) AS avg_waste_rate, SUM(waste_rate * production_volume * total_cost_per_unit) AS estimated_waste_cost FROM awsdatacatalog.financial_data_db.cost_data GROUP BY year ORDER BY year;"
+    },
+    {
+      "naturalLanguage": "How does bioplastic pricing compare to traditional plastic over time?",
+      "sqlQuery": "SELECT m1.date, m1.cost_per_ton AS bioplastic_cost, m2.cost_per_ton AS hdpe_cost FROM awsdatacatalog.financial_data_db.material_cost_trends m1 JOIN awsdatacatalog.financial_data_db.material_cost_trends m2 ON m1.date = m2.date WHERE m1.material_type = 'Bioplastic (PLA)' AND m2.material_type = 'Plastic (HDPE)' ORDER BY m1.date;"
+    },
+    {
+      "naturalLanguage": "Which equipment has shown the most improvement in efficiency over the past 3 years?",
+      "sqlQuery": "SELECT eh1.machine_id, e.name, (eh2.efficiency_percentage - eh1.efficiency_percentage) AS efficiency_improvement FROM awsdatacatalog.financial_data_db.equipment_history eh1 JOIN awsdatacatalog.financial_data_db.equipment_history eh2 ON eh1.machine_id = eh2.machine_id JOIN awsdatacatalog.financial_data_db.equipment e ON eh1.machine_id = e.machine_id WHERE eh1.date = '2021-01' AND eh2.date = '2024-01' ORDER BY efficiency_improvement DESC;"
+    },
+    {
+      "naturalLanguage": "What's the ROI of our sustainability initiatives over the past 5 years?",
+      "sqlQuery": "SELECT 'Sustainability ROI' AS metric, (estimated_carbon_credit_value_USD / (carbon_footprint_reduction_percentage + water_usage_reduction_percentage + landfill_waste_reduction_percentage + virgin_material_reduction_percentage)) AS roi_metric, carbon_footprint_reduction_percentage, water_usage_reduction_percentage, landfill_waste_reduction_percentage, virgin_material_reduction_percentage FROM awsdatacatalog.financial_data_db.roi_sustainability WHERE year_5 > 0;"
+    }
+  ]
+}

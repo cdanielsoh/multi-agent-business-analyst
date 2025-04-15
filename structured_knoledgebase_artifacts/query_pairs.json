@@ -1,0 +1,204 @@
+{
+    "queryPairs": [
+      {
+        "naturalLanguage": "What was our total raw materials spending in 2023?",
+        "sqlQuery": "SELECT SUM(raw_materials) AS total_raw_materials_2023 FROM cost_data WHERE date LIKE '2023-%';"
+      },
+      {
+        "naturalLanguage": "How has our carbon footprint per unit changed over time?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, AVG(carbon_footprint_per_unit) AS avg_carbon_footprint FROM cost_data GROUP BY SUBSTRING(date, 1, 4) ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "Which packaging equipment has the highest maintenance costs?",
+        "sqlQuery": "SELECT machine_id, name, annual_maintenance_cost FROM equipment ORDER BY annual_maintenance_cost DESC;"
+      },
+      {
+        "naturalLanguage": "What's the correlation between waste rate and total cost per unit?",
+        "sqlQuery": "SELECT (COUNT(*) * SUM(waste_rate * total_cost_per_unit) - SUM(waste_rate) * SUM(total_cost_per_unit)) / (SQRT(COUNT(*) * SUM(waste_rate * waste_rate) - SUM(waste_rate) * SUM(waste_rate)) * SQRT(COUNT(*) * SUM(total_cost_per_unit * total_cost_per_unit) - SUM(total_cost_per_unit) * SUM(total_cost_per_unit))) AS correlation FROM cost_data;"
+      },
+      {
+        "naturalLanguage": "How does our warehouse utilization compare across different facilities?",
+        "sqlQuery": "SELECT facility_id, location, AVG(storage_utilization_percentage) AS avg_utilization FROM warehouses_history WHERE storage_utilization_percentage > 0 GROUP BY facility_id, location ORDER BY avg_utilization DESC;"
+      },
+      {
+        "naturalLanguage": "What's our yearly sustainability index trend?",
+        "sqlQuery": "SELECT year, sustainability_index FROM roi_history ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "Which machine has shown the most improvement in efficiency over the past 3 years?",
+        "sqlQuery": "SELECT eh1.machine_id, e.name, (eh2.efficiency_percentage - eh1.efficiency_percentage) AS efficiency_improvement FROM equipment_history eh1 JOIN equipment_history eh2 ON eh1.machine_id = eh2.machine_id JOIN equipment e ON eh1.machine_id = e.machine_id WHERE eh1.date = '2021-01' AND eh2.date = '2024-01' ORDER BY efficiency_improvement DESC;"
+      },
+      {
+        "naturalLanguage": "How did the COVID pandemic affect our production volumes?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, SUBSTRING(date, 6, 2) AS month, production_volume FROM cost_data WHERE date BETWEEN '2019-01' AND '2020-12' ORDER BY year, month;"
+      },
+      {
+        "naturalLanguage": "What's the breakdown of our total operational costs by category for 2023?",
+        "sqlQuery": "SELECT SUM(raw_materials) AS total_raw_materials, SUM(labor) AS total_labor, SUM(overhead) AS total_overhead FROM cost_data WHERE date LIKE '2023-%';"
+      },
+      {
+        "naturalLanguage": "Which material type has shown the most price stability over the past 5 years?",
+        "sqlQuery": "SELECT material_type, STDDEV(cost_per_ton) AS price_volatility FROM material_cost_trends GROUP BY material_type ORDER BY price_volatility;"
+      },
+      {
+        "naturalLanguage": "Is there a seasonal pattern to our waste rates?",
+        "sqlQuery": "SELECT SUBSTRING(date, 6, 2) AS month, AVG(waste_rate) AS avg_waste_rate FROM cost_data GROUP BY month ORDER BY month;"
+      },
+      {
+        "naturalLanguage": "What was our total production volume and average cost per unit in 2024?",
+        "sqlQuery": "SELECT SUM(production_volume) AS total_production, AVG(total_cost_per_unit) AS avg_cost_per_unit FROM cost_data WHERE date LIKE '2024-%';"
+      },
+      {
+        "naturalLanguage": "Which warehouse has the best ratio of throughput to square footage?",
+        "sqlQuery": "SELECT facility_id, location, average_monthly_throughput / total_square_footage AS throughput_per_sqft FROM warehouses ORDER BY throughput_per_sqft DESC;"
+      },
+      {
+        "naturalLanguage": "How has equipment efficiency changed with age?",
+        "sqlQuery": "SELECT eh.machine_id, e.name, e.installation_year, AVG(eh.efficiency_percentage) AS avg_efficiency FROM equipment_history eh JOIN equipment e ON eh.machine_id = e.machine_id WHERE eh.efficiency_percentage > 0 GROUP BY eh.machine_id, e.name, e.installation_year ORDER BY e.installation_year;"
+      },
+      {
+        "naturalLanguage": "What are our projected maintenance costs for equipment in 2025 based on historical trends?",
+        "sqlQuery": "SELECT machine_id, MAX(annual_maintenance_cost) AS latest_maintenance_cost, MAX(annual_maintenance_cost) * 1.05 AS projected_2025_cost FROM equipment_history WHERE date LIKE '2024-%' GROUP BY machine_id;"
+      },
+      {
+        "naturalLanguage": "How does bioplastic pricing compare to traditional plastic over time?",
+        "sqlQuery": "SELECT m1.date, m1.cost_per_ton AS bioplastic_cost, m2.cost_per_ton AS hdpe_cost FROM material_cost_trends m1 JOIN material_cost_trends m2 ON m1.date = m2.date WHERE m1.material_type = 'Bioplastic (PLA)' AND m2.material_type = 'Plastic (HDPE)' ORDER BY m1.date;"
+      },
+      {
+        "naturalLanguage": "Which months have the highest labor hours across all facilities?",
+        "sqlQuery": "SELECT date, SUM(labor_hours_per_month) AS total_labor_hours FROM warehouses_history GROUP BY date ORDER BY total_labor_hours DESC LIMIT 5;"
+      },
+      {
+        "naturalLanguage": "What's the ROI of our sustainability initiatives over the past 5 years?",
+        "sqlQuery": "SELECT 'Sustainability ROI' AS metric, (estimated_carbon_credit_value_USD / (carbon_footprint_reduction_percentage + water_usage_reduction_percentage + landfill_waste_reduction_percentage + virgin_material_reduction_percentage)) AS roi_metric FROM roi_sustainability WHERE year_5 > 0;"
+      },
+      {
+        "naturalLanguage": "Is there a correlation between machine downtime and parts replacement costs?",
+        "sqlQuery": "SELECT machine_id, CORR(downtime_hours_per_month, parts_replaced_cost) AS downtime_parts_correlation FROM equipment_history WHERE downtime_hours_per_month > 0 GROUP BY machine_id;"
+      },
+      {
+        "naturalLanguage": "How much warehouse space is dedicated to packaging across all facilities?",
+        "sqlQuery": "SELECT SUM(total_square_footage * packaging_storage_allocation) AS total_packaging_space FROM warehouses;"
+      },
+      {
+        "naturalLanguage": "What's our average cost per unit trend over the past 5 years?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, ROUND(AVG(total_cost_per_unit), 2) AS avg_cost_per_unit FROM cost_data GROUP BY year ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "Which materials have shown the greatest price volatility?",
+        "sqlQuery": "SELECT material_type, (STDDEV(cost_per_ton) / AVG(cost_per_ton)) * 100 AS coefficient_of_variation FROM material_cost_trends GROUP BY material_type ORDER BY coefficient_of_variation DESC;"
+      },
+      {
+        "naturalLanguage": "How do our overseas warehouses compare to domestic ones in terms of efficiency?",
+        "sqlQuery": "SELECT CASE WHEN facility_id LIKE 'WH-Overseas%' THEN 'International' ELSE 'Domestic' END AS location_type, AVG(inventory_turnover_rate) AS avg_inventory_turnover FROM warehouses_history WHERE inventory_turnover_rate > 0 GROUP BY location_type;"
+      },
+      {
+        "naturalLanguage": "What's the impact of change-over time on our production efficiency?",
+        "sqlQuery": "SELECT change_over_time_minutes, AVG(production_volume) AS avg_production_volume FROM cost_data GROUP BY change_over_time_minutes ORDER BY change_over_time_minutes;"
+      },
+      {
+        "naturalLanguage": "How has our shipping cost per unit changed relative to production volume?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, AVG(shipping_cost_per_unit) AS avg_shipping_cost, AVG(production_volume) AS avg_production_volume FROM cost_data GROUP BY year ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "Which equipment is approaching end-of-life and needs replacement planning?",
+        "sqlQuery": "SELECT e.machine_id, e.name, e.remaining_useful_life_years FROM equipment e WHERE e.remaining_useful_life_years <= 3 ORDER BY e.remaining_useful_life_years;"
+      },
+      {
+        "naturalLanguage": "How much have we reduced our landfill waste over the past 5 years?",
+        "sqlQuery": "SELECT (1 - (SELECT landfill_waste_tons FROM roi_history WHERE year = 2024) / (SELECT landfill_waste_tons FROM roi_history WHERE year = 2019)) * 100 AS percentage_reduction FROM roi_history LIMIT 1;"
+      },
+      {
+        "naturalLanguage": "What's our average warehouse utilization rate across all facilities each year?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, AVG(storage_utilization_percentage) AS avg_utilization_rate FROM warehouses_history WHERE storage_utilization_percentage > 0 GROUP BY year ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "Is there a relationship between energy consumption and equipment age?",
+        "sqlQuery": "SELECT e.installation_year, AVG(eh.energy_consumption_kwh) AS avg_energy_consumption FROM equipment e JOIN equipment_history eh ON e.machine_id = eh.machine_id WHERE eh.energy_consumption_kwh > 0 GROUP BY e.installation_year ORDER BY e.installation_year;"
+      },
+      {
+        "naturalLanguage": "How has our overall equipment efficiency improved since implementing new maintenance procedures in 2022?",
+        "sqlQuery": "SELECT CASE WHEN SUBSTRING(date, 1, 4) < '2022' THEN 'Before Maintenance Program' ELSE 'After Maintenance Program' END AS period, AVG(efficiency_percentage) AS avg_efficiency FROM equipment_history WHERE efficiency_percentage > 0 GROUP BY period;"
+      },
+      {
+        "naturalLanguage": "Which facility has shown the most improvement in inventory turnover rate since 2020?",
+        "sqlQuery": "SELECT wh1.facility_id, wh2.inventory_turnover_rate - wh1.inventory_turnover_rate AS turnover_improvement FROM warehouses_history wh1 JOIN warehouses_history wh2 ON wh1.facility_id = wh2.facility_id WHERE wh1.date = '2020-01' AND wh2.date = '2024-01' AND wh1.inventory_turnover_rate > 0 ORDER BY turnover_improvement DESC LIMIT 1;"
+      },
+      {
+        "naturalLanguage": "How have labor costs per production unit changed year over year?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, SUM(labor)/SUM(production_volume) AS labor_cost_per_unit FROM cost_data GROUP BY year ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "What's the relationship between packaging weight and shipping cost per unit?",
+        "sqlQuery": "SELECT packaging_weight_per_unit, AVG(shipping_cost_per_unit) AS avg_shipping_cost FROM cost_data GROUP BY packaging_weight_per_unit ORDER BY packaging_weight_per_unit;"
+      },
+      {
+        "naturalLanguage": "Which months show the highest waste rates historically?",
+        "sqlQuery": "SELECT SUBSTRING(date, 6, 2) AS month, AVG(waste_rate) AS avg_waste_rate FROM cost_data GROUP BY month ORDER BY avg_waste_rate DESC LIMIT 3;"
+      },
+      {
+        "naturalLanguage": "How has the ratio between machine hours and labor hours changed over time?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, SUM(machine_hours)/SUM(labor_hours) AS machine_to_labor_ratio FROM cost_data GROUP BY year ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "What's the average annual increase in total cost per unit?",
+        "sqlQuery": "WITH yearly_costs AS (SELECT SUBSTRING(date, 1, 4) AS year, AVG(total_cost_per_unit) AS avg_cost FROM cost_data GROUP BY year) SELECT (MAX(avg_cost) - MIN(avg_cost)) / (COUNT(DISTINCT year) - 1) AS avg_annual_increase FROM yearly_costs;"
+      },
+      {
+        "naturalLanguage": "Which equipment has the best capacity to energy consumption ratio?",
+        "sqlQuery": "SELECT machine_id, name, capacity_units_per_hour/energy_consumption_kwh AS efficiency_ratio FROM equipment ORDER BY efficiency_ratio DESC;"
+      },
+      {
+        "naturalLanguage": "How does warehouse location affect shipping costs?",
+        "sqlQuery": "SELECT w.location, w.average_shipping_distance_miles, AVG(c.shipping_cost_per_unit) AS avg_shipping_cost FROM warehouses w, cost_data c GROUP BY w.location, w.average_shipping_distance_miles ORDER BY w.average_shipping_distance_miles;"
+      },
+      {
+        "naturalLanguage": "What's the correlation between machine age and downtime hours?",
+        "sqlQuery": "SELECT eh.machine_id, CORR(2024 - e.installation_year, eh.downtime_hours_per_month) AS age_downtime_correlation FROM equipment_history eh JOIN equipment e ON eh.machine_id = e.machine_id WHERE eh.downtime_hours_per_month > 0 GROUP BY eh.machine_id;"
+      },
+      {
+        "naturalLanguage": "Which sustainable packaging material has had the most stable pricing over time?",
+        "sqlQuery": "SELECT material_type, STDDEV(cost_per_ton)/AVG(cost_per_ton) AS price_stability FROM material_cost_trends WHERE material_type IN ('Bioplastic (PLA)', 'Recycled Cardboard') GROUP BY material_type ORDER BY price_stability;"
+      },
+      {
+        "naturalLanguage": "How has our maintenance cost per operating hour changed over the years?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, SUM(maintenance_cost)/SUM(machine_hours) AS maintenance_per_hour FROM cost_data GROUP BY year ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "What's the quarterly trend in warehouse utilization for our largest facility?",
+        "sqlQuery": "SELECT SUBSTRING(date, 1, 4) AS year, CEILING(CAST(SUBSTRING(date, 6, 2) AS INTEGER)/3) AS quarter, AVG(storage_utilization_percentage) AS avg_utilization FROM warehouses_history WHERE facility_id = 'WH-Central' GROUP BY year, quarter ORDER BY year, quarter;"
+      },
+      {
+        "naturalLanguage": "Do newer machines have better carbon footprint metrics?",
+        "sqlQuery": "SELECT e.installation_year, AVG(c.carbon_footprint_per_unit) AS avg_carbon_footprint FROM equipment e, cost_data c GROUP BY e.installation_year ORDER BY e.installation_year;"
+      },
+      {
+        "naturalLanguage": "What's our best month for production efficiency historically?",
+        "sqlQuery": "SELECT SUBSTRING(date, 6, 2) AS month, AVG(production_volume/labor_hours) AS production_efficiency FROM cost_data GROUP BY month ORDER BY production_efficiency DESC LIMIT 1;"
+      },
+      {
+        "naturalLanguage": "How has customer satisfaction changed with our sustainability improvements?",
+        "sqlQuery": "SELECT r.year, r.sustainability_index, r.customer_satisfaction_score FROM roi_history r ORDER BY r.year;"
+      },
+      {
+        "naturalLanguage": "Which equipment types are compatible with sustainable materials?",
+        "sqlQuery": "SELECT machine_id, name, compatible_materials FROM equipment WHERE compatible_materials LIKE '%Recycled%' OR compatible_materials LIKE '%Compostable%' OR compatible_materials LIKE '%Bioplastic%';"
+      },
+      {
+        "naturalLanguage": "What's the relationship between water usage and virgin material reduction?",
+        "sqlQuery": "SELECT water_usage_million_liters, virgin_material_usage_tons FROM roi_history ORDER BY year;"
+      },
+      {
+        "naturalLanguage": "How has packaging damage percentage changed across different warehouses over time?",
+        "sqlQuery": "SELECT facility_id, SUBSTRING(date, 1, 4) AS year, AVG(packaging_damage_percentage) AS avg_damage FROM warehouses_history WHERE packaging_damage_percentage > 0 GROUP BY facility_id, year ORDER BY facility_id, year;"
+      },
+      {
+        "naturalLanguage": "What's the correlation between regulatory compliance improvement and carbon footprint reduction?",
+        "sqlQuery": "SELECT CORR(regulatory_compliance_improvement_rating, carbon_footprint_reduction_percentage) AS compliance_carbon_correlation FROM roi_sustainability WHERE carbon_footprint_reduction_percentage > 0;"
+      },
+      {
+        "naturalLanguage": "Which material pricing has the strongest correlation with our overall cost per unit?",
+        "sqlQuery": "WITH material_costs AS (SELECT m.date, m.material_type, m.cost_per_ton FROM material_cost_trends m), unit_costs AS (SELECT c.date, c.total_cost_per_unit FROM cost_data c) SELECT m.material_type, CORR(m.cost_per_ton, u.total_cost_per_unit) AS cost_correlation FROM material_costs m JOIN unit_costs u ON m.date = u.date GROUP BY m.material_type ORDER BY ABS(cost_correlation) DESC;"
+      }
+    ]
+  }
